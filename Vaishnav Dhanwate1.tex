@@ -1,0 +1,202 @@
+\documentclass[letterpaper,10pt]{article}
+
+% Dependencies
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Serif Fonts
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Custom Commands
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+}
+
+\renewcommand\labelitemi{--}
+
+\begin{document}
+
+%---------%
+% Heading %
+%---------%
+\documentTitle{Vaishnav Dhanwate}{
+  \href{tel:+918421451325}{
+    \raisebox{-0.05\height}{\faPhone}\ +91 8421451325} ~ | ~
+  \href{mailto:vaishnavdhanwate2512@gmail.com}{
+    \raisebox{-0.15\height}{\faEnvelope}\ vaishnavdhanwate2512@gmail.com} ~ | ~
+  \href{https://www.linkedin.com/in/vaishnav-dhanwate}{
+    \raisebox{-0.15\height}{\faLinkedin}\ LinkedIn-vaishnav-dhanwate} ~ | ~
+  \href{https://github.com/vaishnavSD}{
+    \raisebox{-0.15\height}{\faGithub}\ GitHub-vaishnav-dhanwate}
+}
+
+%---------%
+% Objective %
+%---------%
+\tinysection{Objective}
+
+Motivated and detail-oriented Web and Mobile App Developer with hands-on experience in building scalable, full-stack, and cross-platform applications using modern technologies. Seeking to contribute creativity and technical expertise in developing web and mobile solutions that enhance user experience and efficiency.
+
+%------------%
+% Experience %
+%------------%
+\vspace{10pt}
+\section{Experience}
+
+\headingBf{Netleap IT Training | Web Developer Intern}{Jan 2025 -- Feb 2025}
+\headingIt{Nashik, Maharashtra}{}
+\begin{resume_list}
+  \item Designed and implemented \textbf{responsive UI components} for web applications using \textbf{HTML, CSS, and JavaScript}.
+  \item Built and maintained backend functionality and REST APIs using \textbf{Node.js} and managed data with \textbf{MySQL}.
+  \item Collaborated with the team on debugging, testing, and ensuring cross-browser compatibility.
+\end{resume_list}
+
+%-----------%
+% Projects %
+%-----------%
+\vspace{10pt}
+\section{Projects}
+
+\headingBf{ScrapWale -- Online Scrap Collection Platform (Sponsored Project)}{Oct 2025 - Ongoing}
+\begin{resume_list}
+  \item Developed a full-stack, cross-platform (web and mobile-enabled) solution to streamline scrap collection and management.
+  \item Designed and implemented separate user and agent dashboards for tracking collection requests, user details, and delivery status.
+  \item Built using \textbf{React Native (Expo)} for the frontend, \textbf{Node.js} for the backend, and \textbf{MySQL} for the database.
+\end{resume_list}
+
+\headingBf{Online Course Selling Website}{Feb 2025 -- Mar 2025}
+\begin{resume_list}
+  \item Developed a full-stack web application for selling courses using \textbf{HTML, CSS, JavaScript, and PHP}.
+  \item Integrated core functionalities including user \textbf{authentication}, course listings, and a simple \textbf{checkout flow}.
+  \item Utilized \textbf{MongoDB} for efficient backend data storage and management.
+\end{resume_list}
+
+\headingBf{Hostel Assistance Clone}{Oct 2024 -- Nov 2024}
+\begin{resume_list}
+  \item Created a smart web-based system to efficiently manage comprehensive hostel records, including student and employee details.
+  \item Implemented full \textbf{CRUD} (Create, Read, Update, Delete) operations and a responsive dashboard for data visualization.
+\end{resume_list}
+
+%-----------%
+% Education %
+%-----------%
+\vspace{10pt}
+\section{Education}
+
+\headingBf{Bachelor of Engineering (Computer Engineering)}{2026}
+\headingIt{G.E.S. R.H. Sapat College of Engineering and Management Studies, Nashik}{}
+
+\vspace{5pt}
+\headingBf{Higher Secondary Certificate (HSC) - 78.80\%}{2022}
+\headingIt{Sanjivani Sainiki School and Jr. College}{}
+
+\vspace{5pt}
+\headingBf{Secondary School Certificate (SSC) - 82.80\%}{2020}
+\headingIt{S.G.V.Naur}{}
+
+
+%--------%
+% Skills %
+%--------%
+\vspace{10pt}
+\section{Skills}
+
+\begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=130pt]
+  \item[\textbf{Programming Languages:}] Python, Java
+  \vspace{5pt}
+  \item[\textbf{Web Technologies:}] HTML, CSS, JavaScript, \textbf{React Native (Expo)}
+  \vspace{5pt}
+  \item[\textbf{Backend \& Databases:}] \textbf{Node.js}, \textbf{MySQL}, MongoDB, PHP
+  \vspace{5pt}
+  \item[\textbf{Soft Skills:}] Leadership, Problem Solving, Team Collaboration
+\end{itemize}
+
+\end{document}
